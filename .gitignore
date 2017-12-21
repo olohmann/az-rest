@@ -1,7 +1,4 @@
 ### Go ###
-# Vendor
-vendor/
-
 # Build
 bin/
 pkg/
