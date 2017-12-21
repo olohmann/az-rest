@@ -11,7 +11,7 @@ func main() {
 	app.Spec = "[-v]"
 
 	var (
-		verbose    = app.BoolOpt("v verbose", false, "Verbose output mode")
+		verbose = app.BoolOpt("v verbose", false, "Verbose output mode")
 	)
 
 	app.Before = func() {
@@ -26,7 +26,7 @@ func main() {
 	app.Command("GET", "Issue a GET request", func(cmd *cli.Cmd) {
 		var (
 			apiVersion = cmd.StringOpt("a api-version", "", "The API version to use for each request. If not specified, latest version will be used.")
-			rawUrl = cmd.StringArg("URL", "", "The URL to invoke.")
+			rawUrl     = cmd.StringArg("URL", "", "The URL to invoke.")
 		)
 
 		cmd.Spec = "-a URL"
@@ -38,8 +38,8 @@ func main() {
 	app.Command("POST", "Issue a POST request", func(cmd *cli.Cmd) {
 		var (
 			apiVersion = cmd.StringOpt("a api-version", "", "The API version to use for each request. If not specified, latest version will be used.")
-			rawUrl  = cmd.StringArg("URL", "", "The URL to invoke.")
-			reqBody = cmd.StringOpt("body", "", "The body for the POST request.")
+			rawUrl     = cmd.StringArg("URL", "", "The URL to invoke.")
+			reqBody    = cmd.StringOpt("body", "", "The body for the POST request.")
 		)
 
 		cmd.Spec = "-a [--body] URL "

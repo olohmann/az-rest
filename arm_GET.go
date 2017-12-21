@@ -35,7 +35,6 @@ func ArmGet(rawUrl string, apiVersion string, headers string) {
 		log.Fatal(readErr)
 	}
 
-
 	var prettyJson bytes.Buffer
 	indentErr := json.Indent(&prettyJson, respBody, "", "  ")
 	if indentErr != nil {
