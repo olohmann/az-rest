@@ -1,0 +1,88 @@
+{
+	"ImportPath": "github.com/olohmann/az-rest",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/SermoDigital/jose",
+			"Comment": "1.1-1-g2bd9b81",
+			"Rev": "2bd9b81ac51d6d6134fcd4fd846bd2e7347a15f9"
+		},
+		{
+			"ImportPath": "github.com/SermoDigital/jose/crypto",
+			"Comment": "1.1-1-g2bd9b81",
+			"Rev": "2bd9b81ac51d6d6134fcd4fd846bd2e7347a15f9"
+		},
+		{
+			"ImportPath": "github.com/SermoDigital/jose/jws",
+			"Comment": "1.1-1-g2bd9b81",
+			"Rev": "2bd9b81ac51d6d6134fcd4fd846bd2e7347a15f9"
+		},
+		{
+			"ImportPath": "github.com/SermoDigital/jose/jwt",
+			"Comment": "1.1-1-g2bd9b81",
+			"Rev": "2bd9b81ac51d6d6134fcd4fd846bd2e7347a15f9"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-version",
+			"Rev": "4fe82ae3040f80a03d04d2cccb5606a626b8e1ee"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/container",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/flow",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/fsm",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/lexer",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/matcher",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/parser",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/jawher/mow.cli/internal/values",
+			"Comment": "v1.0.3-3-g3ff64ca",
+			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
+		},
+		{
+			"ImportPath": "github.com/sirupsen/logrus",
+			"Comment": "v1.0.4",
+			"Rev": "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "d585fd2cc9195196078f516b69daff6744ef5e84"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "571f7bbbe08da2a8955aed9d4db316e78630e9a3"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/windows",
+			"Rev": "571f7bbbe08da2a8955aed9d4db316e78630e9a3"
+		}
+	]
+}

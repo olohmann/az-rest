@@ -1,0 +1,18 @@
+dist: trusty
+sudo: false
+language: go
+go:
+- 1.9.2
+
+script:
+- make vet
+- GOOS=windows go build
+
+branches:
+  only:
+  - master
+
+matrix:
+  fast_finish: true
+  allow_failures:
+  - go: tip
