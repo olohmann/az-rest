@@ -1,21 +1,18 @@
 package main
 
 import (
-	"bytes"
-	"encoding/json"
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
 )
 
-func ArmGet(rawUrl string, apiVersion string, headers string) {
+func ArmGet(rawUrl string, apiVersion string, jmespathQuery string) {
 	azureConfiguration := GetAzureConfiguration()
 
 	url := ArmUrl(azureConfiguration, rawUrl, apiVersion)
 
 	log.Debug("GET ", url)
-	log.Debug("GET HEADER ", headers)
 
 	req, reqErr := http.NewRequest("GET", url, nil)
 	if reqErr != nil {
@@ -35,15 +32,9 @@ func ArmGet(rawUrl string, apiVersion string, headers string) {
 		log.Fatal(readErr)
 	}
 
-	var prettyJson bytes.Buffer
-	indentErr := json.Indent(&prettyJson, respBody, "", "  ")
-	if indentErr != nil {
-		log.Fatal(indentErr)
-	}
-
 	if resp.StatusCode > 399 {
-		log.Fatal("HTTP StatusCode ", resp.StatusCode, "\n", string(prettyJson.Bytes()))
+		log.Fatal("HTTP StatusCode ", resp.StatusCode, "\n", jsonPrettyPrint(respBody))
 	} else {
-		fmt.Print(string(prettyJson.Bytes()))
+		fmt.Print(applyJmespathToJson(respBody, jmespathQuery))
 	}
 }

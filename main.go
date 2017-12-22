@@ -26,25 +26,27 @@ func main() {
 	app.Command("GET", "Issue a GET request", func(cmd *cli.Cmd) {
 		var (
 			apiVersion = cmd.StringOpt("a api-version", "", "The API version to use for each request. If not specified, latest version will be used.")
+			query      = cmd.StringOpt("query", "", "A JMESPath query to filter the result.")
 			rawUrl     = cmd.StringArg("URL", "", "The URL to invoke.")
 		)
 
-		cmd.Spec = "-a URL"
+		cmd.Spec = "-a [--query] URL"
 		cmd.Action = func() {
-			ArmGet(*rawUrl, *apiVersion, "")
+			ArmGet(*rawUrl, *apiVersion, *query)
 		}
 	})
 
 	app.Command("POST", "Issue a POST request", func(cmd *cli.Cmd) {
 		var (
 			apiVersion = cmd.StringOpt("a api-version", "", "The API version to use for each request. If not specified, latest version will be used.")
-			rawUrl     = cmd.StringArg("URL", "", "The URL to invoke.")
 			reqBody    = cmd.StringOpt("body", "", "The body for the POST request.")
+			query      = cmd.StringOpt("query", "", "A JMESPath query to filter the result.")
+			rawUrl     = cmd.StringArg("URL", "", "The URL to invoke.")
 		)
 
-		cmd.Spec = "-a [--body] URL "
+		cmd.Spec = "-a [--query] [--body] URL "
 		cmd.Action = func() {
-			ArmPost(*rawUrl, *apiVersion, "", *reqBody)
+			ArmPost(*rawUrl, *apiVersion, *query, *reqBody)
 		}
 	})
 

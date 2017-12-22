@@ -68,6 +68,11 @@
 			"Rev": "3ff64ca21987cfa628bd8d1865162b7ccd6107d7"
 		},
 		{
+			"ImportPath": "github.com/jmespath/go-jmespath",
+			"Comment": "0.2.2-20-gdd801d4",
+			"Rev": "dd801d4f4ce7ac746e7e7b4489d2fa600b3b096b"
+		},
+		{
 			"ImportPath": "github.com/sirupsen/logrus",
 			"Comment": "v1.0.4",
 			"Rev": "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
