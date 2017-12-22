@@ -46,3 +46,8 @@ az-rest POST --api-version "2015-08-19" --query "primaryKey" /subscriptions/0000
 
 # Response: "00000D607C080850082B30000110DF02"
 ```
+
+## Acknowledgements
+
+The build process from [terraform](https://github.com/hashicorp/terraform) was a great inspiration for `az-rest`'s build process.
+
